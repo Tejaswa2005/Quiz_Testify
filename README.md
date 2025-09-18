@@ -1,22 +1,35 @@
-# 📝 Student Exam System  
+# 📝 Student Question Paper Management System
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)  
-[![Made with OOP](https://img.shields.io/badge/Made%20With-OOP-orange)]()  
-[![JSON](https://img.shields.io/badge/Data-JSON-green?logo=json)]()  
-[![Status](https://img.shields.io/badge/Status-Active-success)]()  
-
-A beginner-friendly **Python project** that demonstrates **OOP concepts** and **JSON file handling**.  
-This project allows students to **register**, **attempt a quiz**, and **save their results** automatically.  
+A simple Python-based **quiz management system** using `OOP concepts`, `JSON file storage`, and `menus` for both **teachers** and **students**.  
+This project allows teachers to add/view questions and check student results, while students can take quizzes and store their performance.
 
 ---
 
-## 🚀 Features
-✅ Student Registration (Name, Roll No, Class, School)  
-✅ Multiple Choice Quiz (with 3 questions)  
-✅ Automatic Result Calculation (Score + Percentage)  
-✅ Stores Results in `results.json` for future use  
-✅ Handles invalid inputs gracefully  
+## ✨ Features
+
+### 👨‍🏫 Teacher Menu
+- 🔑 Secure login with password.
+- ➕ Add multiple-choice questions (MCQs).
+- 👀 View all added questions with correct answers.
+- 📊 View student results (saved from completed quizzes).
+
+### 🎓 Student Menu
+- 📝 Enter student details (Name, Roll No, Class, School).
+- 🧾 Attempt quiz questions (all compulsory).
+- 🧮 Automatic result calculation:
+  - ✅ Score
+  - 📌 Total
+  - 📈 Percentage
+- 💾 Results are stored in `results.json` for future reference.
+
+---
+
+## 🛠️ Technologies Used
+- **Python 3**
+- **JSON** for storing questions and results
+- **time.sleep()** for adding simple loading effects
 
 ---
 
 ## 📂 Project Structure
+
