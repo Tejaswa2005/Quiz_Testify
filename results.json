@@ -1,34 +1,38 @@
 [
     {
-        "name": "Vasu",
-        "rollno": "21",
-        "class": "7",
-        "school": "Ram Shree",
-        "score": 1,
-        "percentage": 33.33333333333333
+        "Name": "22",
+        "Roll_No": "22",
+        "Class": "22",
+        "School": "22",
+        "Score": 1,
+        "Total": 1,
+        "Percentage": 100.0
     },
     {
-        "name": "Vasu",
-        "rollno": "21",
-        "class": "22",
-        "school": "22",
-        "score": 1,
-        "percentage": 33.33333333333333
+        "Name": "tg",
+        "Roll_No": "21",
+        "Class": "13",
+        "School": "abes",
+        "Score": 1,
+        "Total": 2,
+        "Percentage": 50.0
     },
     {
-        "name": "Anshu",
-        "rollno": "22",
-        "class": "22",
-        "school": "22",
-        "score": 1,
-        "percentage": 33.33333333333333
+        "Name": "vst",
+        "Roll_No": "10",
+        "Class": "2",
+        "School": "pqrst",
+        "Score": 2,
+        "Total": 2,
+        "Percentage": 100.0
     },
     {
-        "name": "AZ",
-        "rollno": "2",
-        "class": "2",
-        "school": "2",
-        "score": 3,
-        "percentage": 100.0
+        "Name": "TG",
+        "Roll_No": "35",
+        "Class": "7",
+        "School": "RSVP",
+        "Score": 2,
+        "Total": 2,
+        "Percentage": 100.0
     }
 ]

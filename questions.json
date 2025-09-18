@@ -1,0 +1,22 @@
+[
+    {
+        "text": "Q1. What is the capital of India?",
+        "options": [
+            "Lucknow ",
+            "Delhi",
+            "Chandigarh ",
+            "Ghaziabad "
+        ],
+        "correct": 2
+    },
+    {
+        "text": "Q2. Who is the first person to step on moon ?",
+        "options": [
+            "Kalpana Chawla ",
+            "Rakesh Sharma ",
+            "Neil Armstrong ",
+            "Aryabhatta "
+        ],
+        "correct": 3
+    }
+]
