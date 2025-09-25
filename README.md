@@ -1,7 +1,16 @@
-# 📝 Student Question Paper Management System
+# 📝 Student Question Paper Management System (SQPMS)
 
-A simple Python-based **quiz management system** using `OOP concepts`, `JSON file storage`, and `menus` for both **teachers** and **students**.  
-This project allows teachers to add/view questions and check student results, while students can take quizzes and store their performance.
+A Python-based **quiz management system** built in two versions:  
+
+1. **Basic Version (JSON Storage + OOP)**  
+   - Uses Object-Oriented Programming concepts.  
+   - Stores data in local JSON files (`questions.json`, `results.json`).  
+
+2. **Advanced Version (PostgreSQL Database)**  
+   - Uses `psycopg2` to connect Python with PostgreSQL.  
+   - Stores data in relational tables (`questions`, `results`).  
+   - More scalable and secure for real-world use.
+
 
 ---
 
@@ -20,16 +29,31 @@ This project allows teachers to add/view questions and check student results, wh
   - ✅ Score
   - 📌 Total
   - 📈 Percentage
-- 💾 Results are stored in `results.json` for future reference.
+- 💾 Results stored in either:
+  - `results.json` (JSON version)  
+  - `results` table (PostgreSQL version)
 
 ---
 
 ## 🛠️ Technologies Used
 - **Python 3**
+- **OOP Concepts**  
 - **JSON** for storing questions and results
-- **time.sleep()** for adding simple loading effects
+- **time.sleep()** for UI effects
+
+### PostgreSQL Version
+- **Python 3**  
+- **psycopg2** library for PostgreSQL connection  
+- **PostgreSQL Database**  
+- **pgAdmin4** for database management  
 
 ---
-
 ## 📂 Project Structure
+📦 your-repo
+ ┣ 📜 main.py         # Python program (PostgreSQL version)
+ ┣ 📜 schema.sql      # Database schema (PostgreSQL tables)
+ ┣ 📜 old_main.py     # JSON version (optional)
+ ┣ 📜 questions.json  # Questions storage (JSON version)
+ ┣ 📜 results.json    # Results storage (JSON version)
+ ┗ 📜 README.md       # Documentation
 
