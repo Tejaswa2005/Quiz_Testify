@@ -34,5 +34,23 @@
         "Score": 2,
         "Total": 2,
         "Percentage": 100.0
+    },
+    {
+        "Name": "Vasu ",
+        "Roll_No": "21",
+        "Class": "13",
+        "School": "RSP ",
+        "Score": 2,
+        "Total": 3,
+        "Percentage": 66.67
+    },
+    {
+        "Name": "22",
+        "Roll_No": "2",
+        "Class": "22",
+        "School": "2",
+        "Score": 1,
+        "Total": 3,
+        "Percentage": 33.33
     }
 ]

@@ -18,5 +18,15 @@
             "Aryabhatta "
         ],
         "correct": 3
+    },
+    {
+        "text": "Q3. Who discovered 0 ?",
+        "options": [
+            "Aryabhatta ",
+            "Rakesh Sharma ",
+            "Kalpana Chawla ",
+            "None "
+        ],
+        "correct": 1
     }
 ]
