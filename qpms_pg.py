@@ -1,5 +1,14 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load variables from .env
+
+# Now you can get them
+DB_PASSWORD = os.getenv('POSTGRES_PASSWORD')
+TEACHER_PASSWORD = os.getenv('TEACHER_PASSWORD')
+
 import psycopg2  #this connects python with postgresql
-import time 
+import time
 
 #connector of postgresql
 def get_connection():
@@ -8,13 +17,13 @@ def get_connection():
         port='5432',
         database='qpmsDB',
         user='postgres',
-        password='0602'
-    );
+        password=DB_PASSWORD
+    )
 # TEACHER
 def teacher_menu():
     
     teacher = input('Enter your name with your title (Mr./Ms.) : ')
-    password = '2022'  
+    password = TEACHER_PASSWORD
     print('Confirming your password...')
     time.sleep(1) 
     entered = input('Enter Teacher_Menu Password: ')
@@ -49,7 +58,7 @@ def teacher_menu():
           cur = conn.cursor()  #cusror object read/write data in the database
           cur.execute(       #actually runs your sql command
                 'INSERT INTO questions (text, option1, option2, option3, option4, correct) VALUES (%s, %s,%s,%s,%s, %s)',
-                 #%s are the used in library of psycopg2 and also cuts the strings ans special characters and also safe from malicious attacks.
+                 #%s are the used in library of psycopg2 and also cuts the strings and special characters and also safe from malicious attacks.
                  (text, options[0], options[1], options[2], options[3], correct)
             )
           conn.commit()  #save your changes to database (permanently)
@@ -62,7 +71,7 @@ def teacher_menu():
           conn = get_connection()
           cur = conn.cursor()
           cur.execute("SELECT id, text, option1, option2, option3, option4, correct FROM questions")
-          questions = cur.fetchall() #this will fetch all the questions o/w only 1 ques will be fetch also fetchall works as tuple not dictionary 
+          questions = cur.fetchall() #this will fetch all the questions o/w only 1 ques will be fetched also fetchall works as tuple not dictionary
           cur.close()
           conn.close()
           if not questions:
@@ -107,7 +116,7 @@ def teacher_menu():
 # STUDENT
 def student_menu():
     print('----Student Details----')
-    Student = input('Enter Your Name= ').strip()   #.split() throws a list separated by commas 
+    Student = input('Enter Your Name= ').strip()   #.split() throws a list separated by commas
     Roll_No = input('Your Roll-no.= ')
     Class = input('Your class= ')
     School = input('School Name= ')
@@ -119,7 +128,7 @@ def student_menu():
     print('----Exam Page----')
     time.sleep(1)
     print('___________________')
-    # Load questions from PostgreSQL
+    # Load questions from Postgresql
     conn = get_connection()
     cur = conn.cursor()
     cur.execute("SELECT id, text, option1, option2, option3, option4, correct FROM questions")
@@ -156,8 +165,7 @@ def student_menu():
                 
              if answer == q[6]:    
                  score += 1
-            
-                        
+
             percentage = (score / total) * 100
             print('Submitting your test...')
             time.sleep(2)
@@ -171,10 +179,8 @@ def student_menu():
             conn = get_connection()
             cur = conn.cursor()
             cur.execute(
-                """
-                INSERT INTO results (name, roll_no, class, school, score, percentage)
-                VALUES (%s, %s, %s, %s, %s, %s)
-                """,
+                """ INSERT INTO results (name, roll_no, class, school, score, percentage)
+                    VALUES (%s, %s, %s, %s, %s, %s) """,
                 (Student, Roll_No, Class, School, score, round(percentage, 2))
             )
             conn.commit()
