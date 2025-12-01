@@ -17,3 +17,4 @@ CREATE TABLE results (
     score INT,
     percentage NUMERIC(5,2)
 );
+                       
